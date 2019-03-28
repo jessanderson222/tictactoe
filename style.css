@@ -1,0 +1,25 @@
+.board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 700px;
+  height: 650px;
+}
+
+.square {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  line-height: 200px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  justify-content: center;
+}
