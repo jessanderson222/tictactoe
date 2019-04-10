@@ -6,16 +6,20 @@
     <script src="index.js"></script>
   </head>
   <body>
-    <div class="board">
-      <div id="square-1" class="square"></div>
-      <div id="square-2" class="square"></div>
-      <div id="square-3" class="square"></div>
-      <div id="square-4" class="square"></div>
-      <div id="square-5" class="square"></div>
-      <div id="square-6" class="square"></div>
-      <div id="square-7" class="square"></div>
-      <div id="square-8" class="square"></div>
-      <div id="square-9" class="square"></div>
-      <button class="button" id="start-btn">Start Game</button>
+    <div class="game">
+      <div class="game-title">Tic Tac Toe</div>
+      <div class="player">
+        Player 1
+        <div id="player1" class="selected">
+          0
+        </div>
+      </div>
+      <table id="game" class="tictactoe"></table>
+      <div class="player">
+        Player 2
+        <div id="player2">0</div>
+      </div>
+      <div class="clear"></div>
+    </div>
   </body>
 </html>
