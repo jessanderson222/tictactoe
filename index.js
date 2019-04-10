@@ -6,6 +6,8 @@ var points1 = 0; //ongoing games player scores
 var points2 = 0;
 var size = 3; //board measure in width * height
 
+//every major step in the game is its own function
+
 function drawBoard() {
   var parent = document.getElementById("game");
   var counter = 1;
@@ -18,7 +20,20 @@ function drawBoard() {
       col.innerHTML = counter;
 
       row.appendChild(col);
+      counter++;
     }
     parent.appendChild(row);
   }
+}
+
+//add win cases
+function loadAnswers() {
+  winners.push([1, 2, 3]);
+  winners.push([4, 5, 6]);
+  winners.push([7, 8, 9]);
+  winners.push([1, 4, 7]);
+  winners.push([2, 5, 8]);
+  winners.push([3, 6, 9]);
+  winners.push([1, 5, 9]);
+  winners.push([3, 5, 7]);
 }
