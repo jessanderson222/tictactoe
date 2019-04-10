@@ -9,21 +9,62 @@ var size = 3; //board measure in width * height
 //every major step in the game is its own function
 
 function drawBoard() {
-  var parent = document.getElementById("game");
+  var Parent = document.getElementById("game");
   var counter = 1;
 
-  for (var i = 0; i < 3; i++) {
+  while (Parent.hasChildNodes()) {
+    Parent.removeChild(Parent.firstChild);
+  }
+
+  for (s = 0; s < 3; s++) {
     var row = document.createElement("tr");
 
-    for (var x = 0; x < size; x++) {
+    for (r = 0; r < 3; r++) {
       var col = document.createElement("td");
+      col.id = counter;
       col.innerHTML = counter;
+
+      var handler = function(e) {
+        if (currentPlayer == 0) {
+          this.innerHTML = "X";
+          player1Selections.push(parseInt(this.id));
+          player1Selections.sort(function(a, b) {
+            return a - b;
+          });
+        } else {
+          this.innerHTML = "O";
+          player2Selections.push(parseInt(this.id));
+          player2Selections.sort(function(a, b) {
+            return a - b;
+          });
+        }
+
+        if (checkWinner()) {
+          if (currentPlayer == 0) points1++;
+          else points2++;
+
+          document.getElementById("player1").innerHTML = points1;
+          document.getElementById("player2").innerHTML = points2;
+
+          reset();
+          drawBoard();
+        } else {
+          if (currentPlayer == 0) currentPlayer = 1;
+          else currentPlayer = 0;
+          this.removeEventListener("click", arguments.callee);
+        }
+      };
+
+      col.addEventListener("click", handler);
 
       row.appendChild(col);
       counter++;
     }
-    parent.appendChild(row);
+
+    Parent.appendChild(row);
   }
+
+  loadAnswers();
 }
 
 //add win cases
