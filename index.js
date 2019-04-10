@@ -48,6 +48,9 @@ function drawBoard() {
 
           reset();
           drawBoard();
+        } else if (player2Selections.length + player1Selections.length == 9) {
+          reset();
+          drawBoard();
         } else {
           if (currentPlayer == 0) currentPlayer = 1;
           else currentPlayer = 0;
@@ -124,4 +127,12 @@ function loadAnswers() {
   winners.push([3, 6, 9]);
   winners.push([1, 5, 9]);
   winners.push([3, 5, 7]);
+}
+
+function reset() {
+  currentPlayer = 0;
+  player1Selections = new Array();
+  player2Selections = new Array();
+  // d("player1").classList.add("selected");
+  // d("player2").classList.remove("selected");
 }
