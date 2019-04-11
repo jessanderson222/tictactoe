@@ -8,6 +8,11 @@ var size = 3; //board measure in width * height
 
 //every major step in the game is its own function
 
+//board loads when page loads
+document.addEventListener("DOMContentLoaded", () => {
+  drawBoard();
+});
+
 function drawBoard() {
   var Parent = document.getElementById("game");
   var counter = 1;
