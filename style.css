@@ -28,12 +28,14 @@ body {
   color: #fff;
   padding: 10px;
   text-align: center;
+  font-family: "Helvetica";
 }
 
 .game .player {
   float: left;
   text-align: center;
   width: 25%;
+  font-family: "Helvetica";
 }
 
 .game .player .selected {
