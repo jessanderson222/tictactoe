@@ -27,7 +27,7 @@ function drawBoard() {
     for (r = 0; r < 3; r++) {
       var col = document.createElement("td");
       col.id = counter;
-      col.innerHTML = counter;
+      // col.innerHTML = counter;
 
       var handler = function(e) {
         if (currentPlayer == 0) {
