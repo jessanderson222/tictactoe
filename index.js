@@ -27,7 +27,6 @@ function drawBoard() {
     for (r = 0; r < 3; r++) {
       var col = document.createElement("td");
       col.id = counter;
-      // col.innerHTML = counter;
 
       var handler = function(e) {
         if (currentPlayer == 0) {
@@ -138,6 +137,4 @@ function reset() {
   currentPlayer = 0;
   player1Selections = new Array();
   player2Selections = new Array();
-  // d("player1").classList.add("selected");
-  // d("player2").classList.remove("selected");
 }

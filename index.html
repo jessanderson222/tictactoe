@@ -6,19 +6,27 @@
     <script src="index.js"></script>
   </head>
   <body>
+    <h1 class="game-title">Tic Tac Toe</h1>
+    <table id="game" class="tictactoe"></table>
     <div class="game">
-      <div class="game-title">Tic Tac Toe</div>
-      <div class="player">
-        Player 1
-        <div id="player1" class="selected">
-          0
+      <div class="spacer"></div>
+      <div class="player-container">
+          <h3 class="player">
+            Player 1
+          </h3>
+          <h1 id="player1">
+            0
+          </h1>
         </div>
-      </div>
-      <table id="game" class="tictactoe"></table>
-      <div class="player">
-        Player 2
-        <div id="player2">0</div>
-      </div>
+        <div class="player-container"> 
+          <h3 class="player">
+            Player 2
+          </h3>
+          <h1 id="player2">
+            0
+          </h1>
+        </div>
+        <div class="spacer"></div>
       <div class="clear"></div>
     </div>
   </body>
